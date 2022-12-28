@@ -38,3 +38,16 @@ if txt_1 == txt_2:
     print('As duas Strings são iguais!')
 else:
     print('As duas Strings são diferentes!')
+
+#4. Valida e corrige número de telefone. Faça um programa que leia um número de telefone, e corrija o número no caso deste conter somente 7 dígitos, acrescentando o '3' na frente. O usuário pode informar o número com ou sem o traço separador.
+
+telefone = input('Digite o número de telefone: ')
+
+telefone = telefone.strip().replace('-', '')
+
+if len(telefone) == 7:
+    telefone = '3' + telefone
+    print('Telefone sem a formatação: {}'.format(telefone))
+    print('Telefone com a formatação: {}{}{}'.format(telefone[:4], '-' , telefone[4:]))
+else: 
+    print('O telefone não possui 7 digitos.')

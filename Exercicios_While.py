@@ -71,13 +71,60 @@ while True:
 
 #6. Altere o programa anterior permitindo ao usuário informar as populações e as taxas de crescimento iniciais. Valide a entrada e permita repetir a operação.
 
-#7. Faça um programa que peça para o usuário inserir o faturamento dos últimos 5 meses (individualmente) e informe o maior faturamento
+#7. Faça um programa que peça para o usuário inserir o faturamento dos últimos 5 meses (individualmente) e informe o maior faturamento#7. Faça um programa que peça para o usuário inserir o faturamento dos últimos 5 meses (individualmente) e informe o maior faturamento
+i =  1
+faturamento = 0
+while i <= 5:
+    mensal = int(input("Infome o faturamento do {}º mês: ".format(i)))
+    if mensal > faturamento:
+         faturamento = mensal
+    i+= 1
+
+print("O maior faturamento foi de R$ {:.2f}.".format(faturamento))
 
 #8. Faça um programa que peça para o usuário inserir o faturamento dos últimos 5 meses (individualmente) e informe o faturamento total (soma) e o faturamento médio por mês (média).
+
+i =  1
+faturamento = 0
+while i <= 5:
+    mensal = int(input("Infome o faturamento do {}º mês: ".format(i)))
+    faturamento += mensal
+    i+= 1
+
+media = faturamento / 5
+
+print("O faturamento total foi de R$ {:.2f} e o faturamento médio foi de R$ {:.2f}." .format(faturamento, media))
 
 #9.  Faça um programa que consiga categorizar a idade das equipes de uma empresa. Faça um programa que peça para n pessoas a sua idade, ao final o programa devera verificar se a média de idade da equipe varia entre 0 e 25 (jovem) ,26 e 60 (sênior) e maior que 60 (idosa); e então, dizer se a equipe é jovem, sênior ou idosa, conforme a média calculada.
 
 #10. Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
+
+eleitores = int(input("Informe o número de eleitores: "))
+
+i = 0
+candidato1 = 0
+candidato2 = 0
+candidato3 = 0
+
+while i < eleitores:
+    candidato = int(input("Informe seu voto: "))
+    if candidato == 1:
+        candidato1 += 1
+        i += 1
+    elif candidato == 2:
+        candidato2 += 1
+        i += 1
+    elif candidato == 3:
+        candidato3 += 1
+        i += 1
+    else:
+        print("Número de candidato inválido, digite novamente!")
+
+
+print("O candidato 1 recebeu {} voto(s).".format(candidato1))
+print("O candidato 2 recebeu {} voto(s).".format(candidato2))
+print("O candidato 2 recebeu {} voto(s).".format(candidato3))
+
 
 #11. Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
 
